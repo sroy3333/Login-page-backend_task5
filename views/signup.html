@@ -16,7 +16,7 @@
         <input type="password" id="password" name="password" required />
         <button>SignUp</button>
     </form>
-    <a href='../Login/login.html'>Existing User - Login</a>
+    <a href='/login/login.html'>Existing User - Login</a>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js" integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         async function signup(e) {
@@ -32,7 +32,7 @@
     console.log(signUpDetails)
     const response = axios.post('http://localhost:5000/user/signup', signUpDetails)
        if(response.status === 201) {
-        window.location.href = "../Login/login.html"
+        window.location.href = "/login/login.html"
        } else {
         throw new Error('Failed to login')
        }
